@@ -9,7 +9,7 @@ file_to_save = os.path.join("election_analysis.txt")
 # 1. Initialize a total vote counter. 
 total_votes = 0 
 
-# Candidate options and candidate votes 
+# Candidate options and candidate votes. 
 candidate_options = []
 
 # 1. Declare the empty dictionary.
@@ -39,7 +39,7 @@ with open(file_to_load) as election_results:
           # Add the candidate name to the candidate list. 
           candidate_options.append(candidate_name)
 
-          # 2. Begin tracking that candidate's vote count. 
+        # 2. Begin tracking that candidate's vote count. 
           candidate_votes[candidate_name] = 0
 
         # Add a vote to that candidate's count. 
@@ -81,7 +81,7 @@ with open(file_to_save, "w") as txt_file:
         f"-----------------------------\n")
     print(winning_candidate_summary)
     # Save the final vote count to the text file.
-    txt_file.write(election_analysis)
+    txt_file.write(winning_candidate_summary)
  
 
   
